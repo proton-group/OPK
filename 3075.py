@@ -46,11 +46,6 @@ def test(arr, index):
         assert index == arr[0]
     elif len(arr) == 0:
         assert index == "No numbers"
-    elif len(arr)%2 == 0:
-        testindex = random.randint(0, len(testarr) - 1)
-        assert (binary_search(testarr, testarr[testindex], 0, len(testarr)-1) == testindex) or (binary_search(testarr, testarr[testindex], 0, len(testarr)-1) == "No numbers")
-        testindex = random.randint(0, len(testarr)-1)
-        assert (binary_search(testarr, testarr[testindex], 0, len(testarr)-1) == testindex) or (binary_search(testarr, testarr[testindex], 0, len(testarr)-1) == "No numbers")
     for i in range(len(arr)-1):
         assert (binary_search(arr, arr[i], 0, len(arr)-1) == i)
         print("Индекс = {}, Число поиска = {}".format(binary_search(arr, arr[i], 0, len(arr)-1), arr[i]))
