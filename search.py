@@ -24,7 +24,7 @@ def my_strstr(haystack, needle):
         else:
             haystack_hash = rehash([haystack_list[num] for num in range(i, len(needle)+i)], haystack_hash, hash_single)
             print(haystack_hash)
-        compar = True if needle_hash == haystack_hash else False
+        compar = needle_hash == haystack_hash
         print(compar)
 
 my_strstr("oaegsghellohehh", "hello")
